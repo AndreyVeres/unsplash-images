@@ -1,4 +1,4 @@
-import { memo, type FC, type SVGProps } from 'react';
+import { memo } from 'react';
 
 export const DonwloadIcon = memo(() => {
   return (

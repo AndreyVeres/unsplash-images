@@ -17,7 +17,7 @@ export const getCode = () => {
 };
 
 export const getAuthToken = async (code: string) => {
-  return new Promise((res, rej) => {
+  return new Promise(res => {
     fetch('/api/token', {
       method: 'POST',
       headers: {

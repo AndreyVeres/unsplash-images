@@ -1,7 +1,7 @@
 import axios from 'axios';
 import qs from 'qs';
 
-export default async function handler(req, res) {
+export default function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method Not Allowed' });
   }
@@ -26,13 +26,15 @@ export default async function handler(req, res) {
       grant_type: 'authorization_code',
     });
 
-    const response = await axios.post(`${api_auth_base}token`, data, {
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-    });
-
-    res.status(200).json({ token: response.data.access_token });
+    axios
+      .post(`${api_auth_base}token`, data, {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      })
+      .then(result => {
+        res.status(200).json({ token: result.data.access_token });
+      });
   } catch (error) {
     console.error('Error fetching token:', error.response ? error.response.data : error.message);
     res.status(500).json({ message: 'Internal Server Error' });

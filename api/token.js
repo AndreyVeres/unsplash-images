@@ -6,10 +6,10 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: 'Method Not Allowed' });
   }
 
-  const client_id = process.env.CLIENT_ID;
-  const client_secret = process.env.CLIENT_SECRET;
-  const redirect_uri = process.env.REDIRECT_URI;
-  const api_auth_base = process.env.API_AUTH_BASEURL;
+  const client_id = process.env.VITE_CLIENT_ID;
+  const client_secret = process.env.VITE_CLIENT_SECRET;
+  const redirect_uri = process.env.VITE_REDIRECT_URI;
+  const api_auth_base = process.env.VITE_API_AUTH_BASEURL;
 
   try {
     const { code } = req.body;

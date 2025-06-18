@@ -21,7 +21,7 @@ const StyledCard = styled.li`
   width: 100%;
   max-width: 473px;
   min-width: 300px;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 11 / 10;
   overflow: hidden;
   border-radius: 8px;
 `;

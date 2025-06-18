@@ -30,7 +30,7 @@ export const MainPage = () => {
       <Container>
         {isLoading && <Spinner />}
         {error && <ErrorMessage>{error.message}</ErrorMessage>}
-        {!!photos?.length && <PhotosContainer photos={photos} />}
+        {!!photos?.length ? <PhotosContainer photos={photos} /> : <span>Избранное пусто</span>}
       </Container>
     </>
   );

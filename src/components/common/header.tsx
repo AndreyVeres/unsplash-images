@@ -7,8 +7,12 @@ import { LogoIcon } from '../../assets/logo.icon';
 export const Header = () => {
   const location = useLocation();
 
+  const isHomePage = location.pathname === '/';
+
+  const headerVariant = isHomePage ? 'large' : 'small';
+
   return (
-    <StyledHeader>
+    <StyledHeader $variant={headerVariant}>
       <Container>
         <StyledWrapper>
           <LogoIcon />
@@ -32,6 +36,11 @@ export const Header = () => {
   );
 };
 
+const headerHeights = {
+  large: '147px',
+  small: '82px',
+};
+
 const StyledLinks = styled.div`
   display: flex;
   gap: 40px;
@@ -46,16 +55,20 @@ const StyledLink = styled(Link)`
 
 const StyledWrapper = styled.div`
   display: flex;
+  height: 100%;
   width: 100%;
   justify-content: space-between;
   align-items: center;
 `;
 
-const StyledHeader = styled.header`
+const StyledHeader = styled.header<{ $variant: 'small' | 'large' }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #000;
   width: 100%;
-  height: 80px;
+
+  height: ${({ $variant }) => headerHeights[$variant] || headerHeights.small};
+
+  transition: height 0.3s ease-in-out;
 `;

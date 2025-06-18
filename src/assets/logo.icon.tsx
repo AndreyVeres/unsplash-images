@@ -1,6 +1,6 @@
 export const LogoIcon = () => {
   return (
-    <svg width='114' height='44' viewBox='0 0 114 44' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <svg style={{ height: '50%', width: 'auto' }} viewBox='0 0 114 44' fill='none' xmlns='http://www.w3.org/2000/svg'>
       <path d='M39.7015 0H4.53516V31.9908H39.7015V0Z' fill='#FFF200' />
       <path
         d='M9.4145 20.3587L8.15429 24.1236H6.53418L10.6572 12.1543H12.5478L16.6889 24.1236H15.0145L13.7181 20.3587H9.4145ZM13.3932 19.151L12.2048 15.7061C11.9349 14.9247 11.755 14.2146 11.5744 13.522H11.5382C11.3583 14.2321 11.1602 14.9603 10.9259 15.6886L9.73754 19.1516H13.3932V19.151Z'

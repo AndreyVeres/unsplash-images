@@ -22,5 +22,5 @@ const StyledPhotosList = styled.ul`
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  padding: 144px 0 144px;
+  padding: 100px 0 144px;
 `;

@@ -26,7 +26,7 @@ export default async function handler(req, res) {
       grant_type: 'authorization_code',
     });
 
-    const response = await axios.post(`${api_auth_base}/token`, data, {
+    const response = await axios.post(`${api_auth_base}token`, data, {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },

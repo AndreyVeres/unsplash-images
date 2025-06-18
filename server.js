@@ -33,8 +33,6 @@ app.post('/token', async (req, res) => {
       },
     });
 
-    console.log(response, 'response');
-
     res.json({ token: response.data.access_token });
   } catch (error) {
     console.log(error, '<error');

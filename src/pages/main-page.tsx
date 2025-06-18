@@ -15,7 +15,9 @@ export const MainPage = () => {
 
   useEffect(() => {
     if (!localStorage.getItem('token')) {
-      getCode();
+      getCode().then(url => {
+        window.location.assign(url);
+      });
     }
   }, []);
 

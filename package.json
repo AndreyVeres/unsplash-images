@@ -9,8 +9,7 @@
     "server": "node server.js",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "vite & npm run server",
-    "vercel-build": "vite build"
+    "start": "vite & npm run server"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.80.7",

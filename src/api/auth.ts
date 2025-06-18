@@ -11,7 +11,7 @@ export const getCode = () => {
     const scope = 'public+read_user+write_likes';
     const authUrl = `${
       import.meta.env.VITE_API_AUTH_BASEURL
-    }/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=${scope}`;
+    }authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=${scope}`;
     window.location.assign(authUrl);
   }
 };
